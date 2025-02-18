@@ -28,7 +28,7 @@ pipeline{
 
 
                     println("${branchName}")
-                    checkout scmGit(branches: [[name: '*/${branchName}']], extensions: [], userRemoteConfigs: [[credentialsId: 'ad5b148e-12de-4b6c-8163-737e1732828b', url: '${srcUrl}']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'ad5b148e-12de-4b6c-8163-737e1732828b', url: '${srcUrl}']])
                 }
             }
         }
